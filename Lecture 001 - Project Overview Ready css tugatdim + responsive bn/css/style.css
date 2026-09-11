@@ -1,0 +1,1405 @@
+/* common styles */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* end of common styles */
+
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background: #f8e7d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* MENU ICON */
+.menu-icon {
+    margin-top: 2rem;
+    width: 4rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.line {
+    width: 3rem;
+    height: .2rem;
+    background: #777;
+    margin: .6rem 0;
+    transition: .3s;
+}
+
+.line-1,
+.line-3 {
+    width: 2.5rem;
+}
+
+.menu-icon:hover .line {
+    width: 30px;
+}
+
+
+/* HAMBURGER → X */
+.checkbox:checked ~ .sidebar .line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* NAVIGATION */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: 
+     linear-gradient(rgba(0, 20, 50, 0.65), rgba(0, 20, 50, 0.65)),
+     url("../img/nav-bg.jpeg") center/cover;
+    transition: left .4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox:checked ~ .navigation {
+    left: 60px;
+}
+
+
+/* NAVIGATION HEADER */
+
+.navigation-header {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.navigation-heading {
+    color:#b8860b;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    margin: 0 0 2rem 0;
+}
+
+
+/* SEARCH */
+
+.navigation-search {
+    display: flex;
+    align-items: center;
+    width: 22rem;
+    height: 3.5rem;
+    border: 0.05rem solid #2e2e2d;
+    border-radius: 2rem;
+    background-color: #1a2036;
+}
+
+.navigation-search-input {
+    width: 17rem;
+    height: 100%;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color:#b8860b;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navigation-search-input::placeholder {
+    color:#b8860b;
+}
+
+.navigation-search-btn {
+    width: 3rem;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color:#b8860b;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+.navigation-search-btn:hover{
+    background-color: transparent;
+}
+
+/* NAVIGATION LIST */
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 15rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.navigation-item {
+    text-align: center;
+}
+
+.navigation-link {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.navigation-link::before,
+.navigation-link::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: orange;
+    transition: 0.3s;
+}
+
+.navigation-link:hover {
+    color: orange;
+}
+
+.navigation-link:hover::before,
+.navigation-link:hover::after {
+    width: 3rem;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    margin-top: auto;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* SOCIAL ICONS */
+.social-icons-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social-icons-list li a {
+    color: #777;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.social-icons-list li a:hover {
+    color:#b8860b;
+}
+/* HEADER */
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+.hotel-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #f3d5ba;
+}
+.checkbox:checked ~ .all {
+    margin-left: 310px;
+}
+button {
+    background: #d4a017;
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: .3s;
+    border-radius: 3rem;
+    color: #000000;
+    width: 14rem;
+    height: 5rem;
+}
+
+button:hover {
+    background: #b8860b;
+}
+.brand,
+.banner-heading,
+.banner-paragraph,
+.banner-button {
+    animation: flowRight 1.5s ease-out;
+}
+
+@keyframes flowRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ABOUT US */
+
+.about-us {
+    background-color: #d6d6d6;
+
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 6rem 8rem;
+
+    gap: 5rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* LEFT TEXT */
+.about-text {
+    width: 35%;
+}
+
+.about-heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about-paragraph {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+
+/* YELLOW BUTTON */
+
+.about-button {
+    background: #d4a017;
+    color: #fff;
+    border: none;
+    padding: 1.2rem 2.5rem;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.about-button:hover {
+    background: #b8860b;
+    transform: translateY(-2px);
+}
+
+
+/* RIGHT IMAGES */
+
+.about-image {
+    width: 60%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .3rem;
+}
+
+.about-image img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/header-1.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 1000;
+}
+
+.navigation {
+    position: fixed;
+    z-index: 999;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+.all {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+    min-height: 100vh;
+    transition: margin-left .4s;
+    overflow: visible;
+}
+
+.checkbox:checked ~ .all {
+    margin-left: 310px;
+}
+.brand {
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+
+    display: flex;
+    align-items: center;
+}
+.banner{
+    font-size: 2rem;
+}
+.banner-heading{
+    font-size: 7.5rem;
+    font-weight: 400;
+}
+.banner-paragraph{
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+.about-us {
+    background-color: #d6d6d6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 600px;
+    padding: 0 8rem;
+}
+
+/* About us*/
+
+.about-us-heading{
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #000000;
+}
+.underline{
+    width: 4rem;
+    height: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.small-underline{
+    width: 15rem;
+    height: .12rem;
+    background-color: #df7c26;
+}
+.big-underline{
+    width: 20rem;
+    height: .12rem;
+    background-color: #df7c26;
+}
+.sub-heading{
+    font-size: 3rem;
+    color: #df7c26;
+    font-weight: 400;
+}
+.about-us-paragraph {
+    width: 100%;
+    max-width: 60rem;
+
+    height: auto;
+
+    font-size: 1.6rem;
+    font-style: italic;
+    line-height: 1.7;
+}
+.about-us-btn{
+    width: 15rem;
+    height: 4rem;
+    border: #df7c26 solid 0.1rem;
+    background-color: transparent;
+    border-radius: 0;
+    color: #df7c26;
+    margin-top: 4rem;
+}
+.about-us-btn:hover{
+    letter-spacing: .1rem;
+    background-color: transparent;
+}
+.about-us {
+    background-color: #d6d6d6;
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8rem;
+}
+
+
+/* CHAP TOMON */
+
+.about-us-content {
+    width: 45%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* O'NG TOMON */
+
+.about-us-images {
+    position: relative;
+    width: 50%;
+    height: 42rem;
+    flex-shrink: 0;
+}
+
+/* RASMLAR */
+
+.about-us-images .image {
+    position: absolute;
+
+    width: 28rem;
+    height: 20rem;
+
+    object-fit: cover;
+
+    border: 2px solid #df7c26;
+
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+
+    transition: .3s;
+}
+
+
+.about-us-images .image-1 {
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.about-us-images .image-2 {
+    top: 5rem;
+    right: 25%;
+    z-index: 2;
+}
+
+.about-us-images .image-3 {
+    top: 9rem;
+    right: 10%;
+    z-index: 3;
+}
+
+.about-us-images .image-4 {
+    top: 13rem;
+    right: 0;
+    z-index: 4;
+}
+.about-us-images .image {
+    transition: 0.3s;
+}
+
+.about-us-images .image:hover {
+    z-index: 10;
+    transform: scale(1.05);
+}
+/* ROOMS */
+
+.rooms {
+    width: 100%;
+    padding: 7rem 4.5rem;
+    background-color: #fff;
+}
+
+.rooms .underline {
+    width: 22rem;
+    height: auto;
+
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rooms .small-underline {
+    width: 10rem;
+    height: .15rem;
+    background-color: #df7c26;
+}
+
+.rooms .big-underline {
+    width: 22rem;
+    height: .15rem;
+    background-color: #df7c26;
+}
+
+/* HEADING */
+
+.common-header {
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.common-heading {
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #df7c26;
+}
+
+
+/* CARDS */
+
+.rooms-cards-wrapper {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 10rem;
+    row-gap: 5rem;
+}
+
+
+/* CARD */
+
+.room-card {
+    width: 100%;
+    background-color: #12111b;
+    
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+
+    transition: .3s;
+}
+
+
+/* IMAGE */
+
+.room-img {
+    display: block;
+    width: 100%;
+    height: 38rem;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+
+    .rooms-cards-wrapper {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .room-img {
+        height: 35rem;
+    }
+
+}
+@media (max-width: 600px) {
+
+    .rooms {
+        padding: 5rem 1.5rem;
+    }
+
+    .rooms-cards-wrapper {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .room-img {
+        height: 25rem;
+    }
+
+    .room-card-content {
+        height: auto;
+        min-height: 23rem;
+    }
+
+    .room-card-heading {
+        font-size: 2.4rem;
+    }
+
+    .room-card-paragraph {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    .room-price {
+        font-size: 3rem;
+    }
+
+}
+/* CARD CONTENT */
+
+.room-card-content {
+    position: relative;
+    width: 100%;
+    height: 26rem;
+    padding: 3rem 2.2rem;
+}
+
+
+/* TITLE */
+
+.room-card-heading {
+    margin: 0 0 1.5rem;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+
+/* TEXT */
+
+.room-card-paragraph {
+    margin: 0;
+    color: #777;
+    font-size: 1.5rem;
+}
+
+
+/* PRICE */
+
+.room-price {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 7rem;
+    margin: 0;
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+
+/* BUTTON */
+
+.room-card-btn {
+    position: absolute;
+    left: 2.2rem;
+    bottom: 2.2rem;
+    width: 17rem;
+    height: 5rem;
+    border: .2rem solid #df7c26;
+    border-radius: 3rem;
+    background-color: transparent;
+    color: #df7c26;
+    font-size: 1.3rem;
+}
+
+
+/* HOVER */
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+.room-card-btn:hover {
+    background-color: #df7c26;
+    color: #fff;
+}
+.rooms-cards-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 5rem;
+}
+.rooms-btn{
+    width: 20rem;
+    height: 4rem;
+    border: #df7c26 solid 0.1rem;
+    background-color: transparent;
+    border-radius: 0;
+    color: #df7c26;
+    margin-top: 4rem;
+}
+.rooms-btn:hover{
+    color: #fff;
+}
+.rooms-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.underline {
+    width: 22rem;
+    height: auto;
+
+    margin: 1rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+/* CUSTOMERS */
+
+.customers {
+    width: 100%;
+    height:auto;
+
+    padding:6rem 2rem;
+
+    background-color: #12111b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5rem 0;
+}
+
+@media(max-width:992px){
+
+    .customers-card-wrapper{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .customer-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .customer-image-wrapper{
+        margin:0 0 2rem 0;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .customer-fullname{
+        font-size:1.8rem;
+    }
+
+    .customer-paragraph-1{
+        font-size:1.3rem;
+    }
+
+    .customer-paragraph-2{
+        font-size:1.2rem;
+    }
+
+    .customers-paragraph{
+        width:100%;
+        font-size:1.3rem;
+    }
+}
+/* HEADING */
+
+.customers .common-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 5rem;
+}
+
+.customers .common-heading {
+    color: #df7c26;
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin: 0;
+}
+@media(max-width:992px){
+
+    .rooms-cards-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .room-img{
+        height:35rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .room-img{
+        height:28rem;
+    }
+
+    .room-card-heading{
+        font-size:2.5rem;
+    }
+
+    .room-price{
+        font-size:3rem;
+    }
+
+    .room-card-content{
+        height:auto;
+        padding-bottom:8rem;
+    }
+}
+@media(max-width:768px){
+
+    .banner-heading{
+        font-size:4rem;
+    }
+
+    .banner-paragraph{
+        font-size:2rem;
+    }
+
+    .hotel-heading{
+        font-size:2rem;
+    }
+
+    button{
+        width:12rem;
+        height:4.5rem;
+        font-size:1.2rem;
+    }
+
+}
+/* PARAGRAPH */
+
+.customers-paragraph {
+    width: 60%;
+    color: #fff;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-style: italic;
+
+    margin: 0 0 5rem;
+}
+
+
+/* CUSTOMER CARDS */
+
+.customers-card-wrapper {
+    width: 85%;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 4rem;
+
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+
+    .customers-card-wrapper {
+        grid-template-columns: 1fr;
+        width: 85%;
+        gap: 3rem;
+    }
+
+}
+/* CARD */
+
+.customer-card {
+    width: 100%;
+    height:auto;
+
+    padding:2rem;
+
+    background-color: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* IMAGE */
+
+.customer-image-wrapper {
+    width: 19rem;
+    height: 13rem;
+
+    margin-left: -1.2rem;
+
+    flex-shrink: 0;
+}
+
+.customer-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* TEXT */
+
+.customer-info {
+    padding: 1.5rem 2rem;
+}
+
+.customer-fullname {
+    margin: 0 0 1rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+
+    color: #555;
+}
+
+.customer-paragraph-1 {
+    margin: 0 0 1rem;
+
+    color: #df7c26;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.customer-paragraph-2 {
+    margin: 0;
+
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+.main-part {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: 3rem;
+}
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+/* 4 ta asosiy ustun */
+.main-part {
+    width: 100%;
+    min-height: 36rem;
+    padding: 5rem 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: 3rem;
+
+    box-sizing: border-box;
+}
+
+/* Footer sarlavhalari */
+.footer-heading {
+    margin-bottom: 2.5rem;
+
+    color: #d4a017;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+/* List */
+.footer-list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.footer-list-item {
+    margin-bottom: 1.5rem;
+}
+
+.footer-list-link {
+    color: #ccc;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.footer-list-link:hover {
+    color: #df7c26;
+    padding-left: .5rem;
+}
+
+
+/* CONTACT */
+
+.contact p {
+    margin-bottom: 1.5rem;
+
+    color: #ccc;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+
+/* FOOTER FORM */
+
+.footer-form {
+    display: flex;
+    width: 100%;
+    max-width: 32rem;
+    height: 4.5rem;
+}
+
+.footer-input {
+    width: 70%;
+    height: 100%;
+    padding: 0 1.2rem;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+}
+
+.footer-btn {
+    width: 30%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: #df7c26;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.footer-btn:hover {
+    background-color: #b85f17;
+}
+
+
+/* GALLERY */
+
+.gallery-images {
+    width: 100%;
+    max-width: 40rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .7rem;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 8rem;
+
+    overflow: hidden;
+}
+
+.footer-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+}
+
+.footer-image:hover {
+    transform: scale(1.1);
+}
+
+
+/* BOTTOM PART */
+
+.creator-part {
+    width: 100%;
+    height: 6rem;
+
+    padding: 0 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #111;
+
+    box-sizing: border-box;
+}
+
+.copyright-text p,
+.text-right p {
+    margin: 0;
+
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.text-right span {
+    color: #d4a017;
+}
+
+
+/* RESPONSIVE  */
+
+@media (max-width: 900px) {
+
+    .main-part {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .gallery-images {
+        max-width: 35rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .main-part {
+        grid-template-columns: 1fr;
+        padding: 4rem 2rem;
+    }
+
+    .gallery-images {
+        max-width: 100%;
+    }
+
+    .creator-part {
+        height: auto;
+        padding: 2rem;
+
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .about-us {
+        padding: 5rem 4rem;
+        gap: 3rem;
+    }
+
+    .about-us-content {
+        width: 45%;
+    }
+
+    .about-us-images {
+        width: 55%;
+        height: 36rem;
+    }
+
+    .about-us-images .image {
+        width: 22rem;
+        height: 16rem;
+    }
+
+    .about-us-images .image-1 {
+        top: 0;
+        right: 0;
+    }
+
+    .about-us-images .image-2 {
+        top: 4rem;
+        right: 20%;
+    }
+
+    .about-us-images .image-3 {
+        top: 7rem;
+        right: 8%;
+    }
+
+    .about-us-images .image-4 {
+        top: 10rem;
+        right: 0;
+    }
+
+    .about-us-heading {
+        font-size: 3.8rem;
+    }
+
+    .sub-heading {
+        font-size: 2.5rem;
+    }
+
+    .about-us-paragraph {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 700px) {
+
+    .about-us {
+        flex-direction: column;
+
+        min-height: auto;
+
+        padding: 5rem 2rem 7rem;
+
+        gap: 4rem;
+
+        text-align: center;
+        height: 800px;
+    }
+
+    .about-us-content {
+        width: 100%;
+    }
+
+    .about-us-heading {
+        font-size: 3.5rem;
+    }
+
+    .sub-heading {
+        font-size: 2.2rem;
+    }
+
+    .about-us-paragraph {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 1.4rem;
+        line-height: 1.7;
+    }
+
+    .about-us-images {
+        width: 100%;
+        height: 32rem;
+    }
+
+    .about-us-images .image {
+        width: 20rem;
+        height: 14rem;
+    }
+
+    .about-us-images .image-1 {
+        top: 0;
+        right: 5%;
+    }
+
+    .about-us-images .image-2 {
+        top: 4rem;
+        right: 30%;
+    }
+
+    .about-us-images .image-3 {
+        top: 8rem;
+        right: 15%;
+    }
+
+    .about-us-images .image-4 {
+        top: 12rem;
+        right: 5%;
+    }
+
+    .about-us-btn {
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width:992px){
+
+    .main-part{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+    @media(max-width:768px){
+
+    .main-part{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .footer-form{
+        margin:auto;
+    }
+    
+    .gallery-images{
+        margin:auto;
+    }
+}
